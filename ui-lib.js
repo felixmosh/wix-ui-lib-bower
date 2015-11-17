@@ -2103,6 +2103,7 @@ jQuery.fn.definePlugin('ColorPickerWithOpacity', function ($) {
 	return {
 		init: function(){
 			this.options.value = this.options.value !== undefined ? this.options.value : this.options.startWithColor;
+			this.options.toolTip = this.options.toolTip !== undefined ? this.options.toolTip : false;
 			this.options.isParamConected = (this.$el.attr('wix-param') || this.$el.attr('data-wix-param'));
 			this.markup();
 			this.setValue(this.options.value);
@@ -2116,7 +2117,7 @@ jQuery.fn.definePlugin('ColorPickerWithOpacity', function ($) {
 				preLabel: '0',
 				postLabel: '100',
 				value: this.options.startWithOpacity,
-				toolTip: false
+				toolTip: this.options.toolTip
 			});
 			if(this.options.divider){
 				this.$el.append(this.$ColorPicker, $('<span class="uilib-text" style="margin: 0 0 0 10px">').text(this.options.divider),this.$Slider);
