@@ -1,6 +1,6 @@
 {
   "name": "@wix/wix-ui-lib-stores",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "ui-lib.js",
   "private": false,
